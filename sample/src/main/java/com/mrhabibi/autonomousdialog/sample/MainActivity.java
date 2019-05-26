@@ -1,5 +1,7 @@
 package com.mrhabibi.autonomousdialog.sample;
 
+import android.content.Intent;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,10 +17,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button buttonAlertDialog = (Button) findViewById(R.id.button_alertdialog);
-        Button buttonDialogFragment = (Button) findViewById(R.id.button_dialogfragment);
-        Button buttonDialogActivity = (Button) findViewById(R.id.button_dialogactivity);
-        Button buttonDialogFragmentActivity = (Button) findViewById(R.id.button_dialogfragmentactivity);
+        Button buttonAlertDialog = findViewById(R.id.button_alertdialog);
+        Button buttonDialogFragment = findViewById(R.id.button_dialogfragment);
+        Button buttonDialogActivity = findViewById(R.id.button_dialogactivity);
+        Button buttonDialogFragmentActivity = findViewById(R.id.button_dialogfragmentactivity);
 
         buttonAlertDialog.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,5 +60,10 @@ public class MainActivity extends AppCompatActivity {
                         .show();
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
     }
 }
