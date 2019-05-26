@@ -130,7 +130,7 @@ public class DialogActivity extends AppCompatActivity {
         }
 
         if (!isAlertDialog()) {
-            setContentView(com.mrhabibi.autonomousdialog.R.layout.activity_dialog);
+            setContentView(R.layout.activity_autonomous_dialog);
         } else if (mCurrentFragment != null && isAlertDialog()) {
 
             /*
